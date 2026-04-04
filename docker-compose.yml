@@ -78,7 +78,8 @@ services:
   frontend:
     build:
       context: ./frontend
-    container_name: haris-frontend
+      dockerfile: Dockerfile
+    container_name: aegis-frontend
     ports:
       - "5173:5173"
     depends_on:
