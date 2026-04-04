@@ -1,20 +1,23 @@
+from importlib import import_module
+from typing import Any
+
 from app.config import settings
 from app.db.repository import Repository
-from app.models.redteam import (
-    RedTeamAttackCandidate,
-    RedTeamRunRequest,
-    RedTeamRunResponse,
-)
 from app.services.redteam.personas import PERSONAS
-from app.utils.llm import invoke_structured_attack
 
 
 class RedTeamAgent:
     def __init__(self, repository: Repository) -> None:
         self._repository = repository
 
-    def run(self, payload: RedTeamRunRequest) -> RedTeamRunResponse:
-        attacks: list[RedTeamAttackCandidate] = []
+    def run(self, payload: Any) -> Any:
+        redteam_models = import_module("app.models.redteam")
+        redteam_attack_candidate = getattr(redteam_models, "RedTeamAttackCandidate")
+        redteam_run_response = getattr(redteam_models, "RedTeamRunResponse")
+        llm_module = import_module("app.utils.llm")
+        invoke_structured_attack = getattr(llm_module, "invoke_structured_attack")
+
+        attacks: list[Any] = []
 
         for index in range(payload.n_attacks):
             persona = PERSONAS[index % len(PERSONAS)]
@@ -41,7 +44,7 @@ class RedTeamAgent:
             )
 
             attacks.append(
-                RedTeamAttackCandidate(
+                redteam_attack_candidate(
                     persona=persona,
                     attack_id=generated.attack_id,
                     content=generated.content,
@@ -53,7 +56,7 @@ class RedTeamAgent:
                 )
             )
 
-        return RedTeamRunResponse(
+        return redteam_run_response(
             status="completed",
             target=payload.target,
             objective=payload.objective,

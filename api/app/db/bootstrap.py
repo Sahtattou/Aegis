@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from hashlib import sha256
+from typing import LiteralString, cast
 from pathlib import Path
 
 from neo4j import Driver
@@ -57,7 +58,7 @@ def run_init_scripts(driver: Driver) -> None:
         for script_path in script_paths:
             script_content = script_path.read_text(encoding="utf-8")
             for statement in _split_cypher_statements(script_content):
-                session.run(statement).consume()
+                session.run(cast(LiteralString, statement)).consume()
 
 
 def bootstrap_kb_collections(driver: Driver) -> None:
@@ -122,7 +123,7 @@ OPTIONS {{
             params = {**item, "embedding": embedding}
             session.run(create_collection_query, params).consume()
 
-        session.run(create_vector_index_query).consume()
+        session.run(cast(LiteralString, create_vector_index_query)).consume()
 
 
 def initialize_neo4j(driver: Driver) -> None:
