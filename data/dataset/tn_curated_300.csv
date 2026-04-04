@@ -1,0 +1,301 @@
+id,text,label,language,source_tag
+1,"3andek mushkla fil compte Poste Tunisienne, d5ol taw b lien hedha w confirm. [variant-1]",phishing,darija,tn_curated_manual
+2,BIAT wallet mta3ek mawjoud fih ta7dith lazem t7ell lien fil message taw. [variant-2],phishing,darija,tn_curated_manual
+3,"Tunisie Telecom 5ater facture ma t5allsetch, click hna bach ma yet9assch l ligne. [variant-3]",phishing,darija,tn_curated_manual
+4,"Ooredoo points rab7et bon achat, sarrifhom tawa men site hedha. [variant-4]",phishing,darija,tn_curated_manual
+5,"STB compte yetla3 fih risque, a3mel verification b CIN w mot de passe hneya. [variant-5]",phishing,darija,tn_curated_manual
+6,"Baridnet yestana confirmation 2FA, 3abbi code li jek fil SMS fi hadh el page. [variant-6]",phishing,darija,tn_curated_manual
+7,"Amende circulation b ismek, khallas bel carte fil portail hedha fel wa9t. [variant-7]",phishing,darija,tn_curated_manual
+8,"CNAM carte so7iya m3attla, raw update obligatoire men lien el mou9tarah. [variant-8]",phishing,darija,tn_curated_manual
+9,"Douane tounsia andha colis b ismek, paye frais sghira bach yetsallem. [variant-9]",phishing,darija,tn_curated_manual
+10,"Steg facture متأخرة, d5ol lel espace client hedha w khalles taw. [variant-10]",phishing,darija,tn_curated_manual
+11,"3andek mushkla fil compte Poste Tunisienne, d5ol taw b lien hedha w confirm. [variant-11]",phishing,darija,tn_curated_manual
+12,BIAT wallet mta3ek mawjoud fih ta7dith lazem t7ell lien fil message taw. [variant-12],phishing,darija,tn_curated_manual
+13,"Tunisie Telecom 5ater facture ma t5allsetch, click hna bach ma yet9assch l ligne. [variant-13]",phishing,darija,tn_curated_manual
+14,"Ooredoo points rab7et bon achat, sarrifhom tawa men site hedha. [variant-14]",phishing,darija,tn_curated_manual
+15,"STB compte yetla3 fih risque, a3mel verification b CIN w mot de passe hneya. [variant-15]",phishing,darija,tn_curated_manual
+16,"Baridnet yestana confirmation 2FA, 3abbi code li jek fil SMS fi hadh el page. [variant-16]",phishing,darija,tn_curated_manual
+17,"Amende circulation b ismek, khallas bel carte fil portail hedha fel wa9t. [variant-17]",phishing,darija,tn_curated_manual
+18,"CNAM carte so7iya m3attla, raw update obligatoire men lien el mou9tarah. [variant-18]",phishing,darija,tn_curated_manual
+19,"Douane tounsia andha colis b ismek, paye frais sghira bach yetsallem. [variant-19]",phishing,darija,tn_curated_manual
+20,"Steg facture متأخرة, d5ol lel espace client hedha w khalles taw. [variant-20]",phishing,darija,tn_curated_manual
+21,"3andek mushkla fil compte Poste Tunisienne, d5ol taw b lien hedha w confirm. [variant-21]",phishing,darija,tn_curated_manual
+22,BIAT wallet mta3ek mawjoud fih ta7dith lazem t7ell lien fil message taw. [variant-22],phishing,darija,tn_curated_manual
+23,"Tunisie Telecom 5ater facture ma t5allsetch, click hna bach ma yet9assch l ligne. [variant-23]",phishing,darija,tn_curated_manual
+24,"Ooredoo points rab7et bon achat, sarrifhom tawa men site hedha. [variant-24]",phishing,darija,tn_curated_manual
+25,"STB compte yetla3 fih risque, a3mel verification b CIN w mot de passe hneya. [variant-25]",phishing,darija,tn_curated_manual
+26,"Baridnet yestana confirmation 2FA, 3abbi code li jek fil SMS fi hadh el page. [variant-26]",phishing,darija,tn_curated_manual
+27,"Amende circulation b ismek, khallas bel carte fil portail hedha fel wa9t. [variant-27]",phishing,darija,tn_curated_manual
+28,"CNAM carte so7iya m3attla, raw update obligatoire men lien el mou9tarah. [variant-28]",phishing,darija,tn_curated_manual
+29,"Douane tounsia andha colis b ismek, paye frais sghira bach yetsallem. [variant-29]",phishing,darija,tn_curated_manual
+30,"Steg facture متأخرة, d5ol lel espace client hedha w khalles taw. [variant-30]",phishing,darija,tn_curated_manual
+31,"3andek mushkla fil compte Poste Tunisienne, d5ol taw b lien hedha w confirm. [variant-31]",phishing,darija,tn_curated_manual
+32,BIAT wallet mta3ek mawjoud fih ta7dith lazem t7ell lien fil message taw. [variant-32],phishing,darija,tn_curated_manual
+33,"Tunisie Telecom 5ater facture ma t5allsetch, click hna bach ma yet9assch l ligne. [variant-33]",phishing,darija,tn_curated_manual
+34,"Ooredoo points rab7et bon achat, sarrifhom tawa men site hedha. [variant-34]",phishing,darija,tn_curated_manual
+35,"STB compte yetla3 fih risque, a3mel verification b CIN w mot de passe hneya. [variant-35]",phishing,darija,tn_curated_manual
+36,"Baridnet yestana confirmation 2FA, 3abbi code li jek fil SMS fi hadh el page. [variant-36]",phishing,darija,tn_curated_manual
+37,"Amende circulation b ismek, khallas bel carte fil portail hedha fel wa9t. [variant-37]",phishing,darija,tn_curated_manual
+38,"CNAM carte so7iya m3attla, raw update obligatoire men lien el mou9tarah. [variant-38]",phishing,darija,tn_curated_manual
+39,"Douane tounsia andha colis b ismek, paye frais sghira bach yetsallem. [variant-39]",phishing,darija,tn_curated_manual
+40,"Steg facture متأخرة, d5ol lel espace client hedha w khalles taw. [variant-40]",phishing,darija,tn_curated_manual
+41,"3andek mushkla fil compte Poste Tunisienne, d5ol taw b lien hedha w confirm. [variant-41]",phishing,darija,tn_curated_manual
+42,BIAT wallet mta3ek mawjoud fih ta7dith lazem t7ell lien fil message taw. [variant-42],phishing,darija,tn_curated_manual
+43,"Tunisie Telecom 5ater facture ma t5allsetch, click hna bach ma yet9assch l ligne. [variant-43]",phishing,darija,tn_curated_manual
+44,"Ooredoo points rab7et bon achat, sarrifhom tawa men site hedha. [variant-44]",phishing,darija,tn_curated_manual
+45,"STB compte yetla3 fih risque, a3mel verification b CIN w mot de passe hneya. [variant-45]",phishing,darija,tn_curated_manual
+46,"Baridnet yestana confirmation 2FA, 3abbi code li jek fil SMS fi hadh el page. [variant-46]",phishing,darija,tn_curated_manual
+47,"Amende circulation b ismek, khallas bel carte fil portail hedha fel wa9t. [variant-47]",phishing,darija,tn_curated_manual
+48,"CNAM carte so7iya m3attla, raw update obligatoire men lien el mou9tarah. [variant-48]",phishing,darija,tn_curated_manual
+49,"Douane tounsia andha colis b ismek, paye frais sghira bach yetsallem. [variant-49]",phishing,darija,tn_curated_manual
+50,"Steg facture متأخرة, d5ol lel espace client hedha w khalles taw. [variant-50]",phishing,darija,tn_curated_manual
+51,تم رصد محاولة دخول غير معتادة على حسابك في البنك، يرجى تأكيد الهوية عبر الرابط. [variant-1],phishing,arabic,tn_curated_manual
+52,بطاقتك البنكية ستتوقف خلال ساعات، قم بالتحديث الفوري من الصفحة التالية. [variant-2],phishing,arabic,tn_curated_manual
+53,لديك طرد معلق في الجمارك التونسية، ادفع رسوم المعالجة الآن لتفادي الإرجاع. [variant-3],phishing,arabic,tn_curated_manual
+54,منظومة البريد التونسي تطلب التحقق الأمني، أدخل رقم البطاقة وكلمة المرور. [variant-4],phishing,arabic,tn_curated_manual
+55,تم حجز مخالفة مرورية باسمك، سددها الآن عبر منصة الدفع المرفقة. [variant-5],phishing,arabic,tn_curated_manual
+56,حسابك في STB يحتاج إعادة تنشيط عاجلة، اضغط الرابط وأكمل التحقق. [variant-6],phishing,arabic,tn_curated_manual
+57,فزت بمكافأة من Ooredoo، لتفعيلها أدخل بياناتك البنكية في النموذج. [variant-7],phishing,arabic,tn_curated_manual
+58,خدمة Tunisie Telecom ستتوقف، أكد بيانات الاشتراك فوراً. [variant-8],phishing,arabic,tn_curated_manual
+59,تم تعليق ملفك في CNSS، يرجى المصادقة عبر هذا الرابط لتجنب الإيقاف. [variant-9],phishing,arabic,tn_curated_manual
+60,تنبيه أمني من BIAT: قم بتغيير رمزك السري عبر البوابة الجديدة. [variant-10],phishing,arabic,tn_curated_manual
+61,تم رصد محاولة دخول غير معتادة على حسابك في البنك، يرجى تأكيد الهوية عبر الرابط. [variant-11],phishing,arabic,tn_curated_manual
+62,بطاقتك البنكية ستتوقف خلال ساعات، قم بالتحديث الفوري من الصفحة التالية. [variant-12],phishing,arabic,tn_curated_manual
+63,لديك طرد معلق في الجمارك التونسية، ادفع رسوم المعالجة الآن لتفادي الإرجاع. [variant-13],phishing,arabic,tn_curated_manual
+64,منظومة البريد التونسي تطلب التحقق الأمني، أدخل رقم البطاقة وكلمة المرور. [variant-14],phishing,arabic,tn_curated_manual
+65,تم حجز مخالفة مرورية باسمك، سددها الآن عبر منصة الدفع المرفقة. [variant-15],phishing,arabic,tn_curated_manual
+66,حسابك في STB يحتاج إعادة تنشيط عاجلة، اضغط الرابط وأكمل التحقق. [variant-16],phishing,arabic,tn_curated_manual
+67,فزت بمكافأة من Ooredoo، لتفعيلها أدخل بياناتك البنكية في النموذج. [variant-17],phishing,arabic,tn_curated_manual
+68,خدمة Tunisie Telecom ستتوقف، أكد بيانات الاشتراك فوراً. [variant-18],phishing,arabic,tn_curated_manual
+69,تم تعليق ملفك في CNSS، يرجى المصادقة عبر هذا الرابط لتجنب الإيقاف. [variant-19],phishing,arabic,tn_curated_manual
+70,تنبيه أمني من BIAT: قم بتغيير رمزك السري عبر البوابة الجديدة. [variant-20],phishing,arabic,tn_curated_manual
+71,تم رصد محاولة دخول غير معتادة على حسابك في البنك، يرجى تأكيد الهوية عبر الرابط. [variant-21],phishing,arabic,tn_curated_manual
+72,بطاقتك البنكية ستتوقف خلال ساعات، قم بالتحديث الفوري من الصفحة التالية. [variant-22],phishing,arabic,tn_curated_manual
+73,لديك طرد معلق في الجمارك التونسية، ادفع رسوم المعالجة الآن لتفادي الإرجاع. [variant-23],phishing,arabic,tn_curated_manual
+74,منظومة البريد التونسي تطلب التحقق الأمني، أدخل رقم البطاقة وكلمة المرور. [variant-24],phishing,arabic,tn_curated_manual
+75,تم حجز مخالفة مرورية باسمك، سددها الآن عبر منصة الدفع المرفقة. [variant-25],phishing,arabic,tn_curated_manual
+76,حسابك في STB يحتاج إعادة تنشيط عاجلة، اضغط الرابط وأكمل التحقق. [variant-26],phishing,arabic,tn_curated_manual
+77,فزت بمكافأة من Ooredoo، لتفعيلها أدخل بياناتك البنكية في النموذج. [variant-27],phishing,arabic,tn_curated_manual
+78,خدمة Tunisie Telecom ستتوقف، أكد بيانات الاشتراك فوراً. [variant-28],phishing,arabic,tn_curated_manual
+79,تم تعليق ملفك في CNSS، يرجى المصادقة عبر هذا الرابط لتجنب الإيقاف. [variant-29],phishing,arabic,tn_curated_manual
+80,تنبيه أمني من BIAT: قم بتغيير رمزك السري عبر البوابة الجديدة. [variant-30],phishing,arabic,tn_curated_manual
+81,تم رصد محاولة دخول غير معتادة على حسابك في البنك، يرجى تأكيد الهوية عبر الرابط. [variant-31],phishing,arabic,tn_curated_manual
+82,بطاقتك البنكية ستتوقف خلال ساعات، قم بالتحديث الفوري من الصفحة التالية. [variant-32],phishing,arabic,tn_curated_manual
+83,لديك طرد معلق في الجمارك التونسية، ادفع رسوم المعالجة الآن لتفادي الإرجاع. [variant-33],phishing,arabic,tn_curated_manual
+84,منظومة البريد التونسي تطلب التحقق الأمني، أدخل رقم البطاقة وكلمة المرور. [variant-34],phishing,arabic,tn_curated_manual
+85,تم حجز مخالفة مرورية باسمك، سددها الآن عبر منصة الدفع المرفقة. [variant-35],phishing,arabic,tn_curated_manual
+86,حسابك في STB يحتاج إعادة تنشيط عاجلة، اضغط الرابط وأكمل التحقق. [variant-36],phishing,arabic,tn_curated_manual
+87,فزت بمكافأة من Ooredoo، لتفعيلها أدخل بياناتك البنكية في النموذج. [variant-37],phishing,arabic,tn_curated_manual
+88,خدمة Tunisie Telecom ستتوقف، أكد بيانات الاشتراك فوراً. [variant-38],phishing,arabic,tn_curated_manual
+89,تم تعليق ملفك في CNSS، يرجى المصادقة عبر هذا الرابط لتجنب الإيقاف. [variant-39],phishing,arabic,tn_curated_manual
+90,تنبيه أمني من BIAT: قم بتغيير رمزك السري عبر البوابة الجديدة. [variant-40],phishing,arabic,tn_curated_manual
+91,تم رصد محاولة دخول غير معتادة على حسابك في البنك، يرجى تأكيد الهوية عبر الرابط. [variant-41],phishing,arabic,tn_curated_manual
+92,بطاقتك البنكية ستتوقف خلال ساعات، قم بالتحديث الفوري من الصفحة التالية. [variant-42],phishing,arabic,tn_curated_manual
+93,لديك طرد معلق في الجمارك التونسية، ادفع رسوم المعالجة الآن لتفادي الإرجاع. [variant-43],phishing,arabic,tn_curated_manual
+94,منظومة البريد التونسي تطلب التحقق الأمني، أدخل رقم البطاقة وكلمة المرور. [variant-44],phishing,arabic,tn_curated_manual
+95,تم حجز مخالفة مرورية باسمك، سددها الآن عبر منصة الدفع المرفقة. [variant-45],phishing,arabic,tn_curated_manual
+96,حسابك في STB يحتاج إعادة تنشيط عاجلة، اضغط الرابط وأكمل التحقق. [variant-46],phishing,arabic,tn_curated_manual
+97,فزت بمكافأة من Ooredoo، لتفعيلها أدخل بياناتك البنكية في النموذج. [variant-47],phishing,arabic,tn_curated_manual
+98,خدمة Tunisie Telecom ستتوقف، أكد بيانات الاشتراك فوراً. [variant-48],phishing,arabic,tn_curated_manual
+99,تم تعليق ملفك في CNSS، يرجى المصادقة عبر هذا الرابط لتجنب الإيقاف. [variant-49],phishing,arabic,tn_curated_manual
+100,تنبيه أمني من BIAT: قم بتغيير رمزك السري عبر البوابة الجديدة. [variant-50],phishing,arabic,tn_curated_manual
+101,Alerte sécurité BIAT: votre compte sera suspendu sans validation immédiate via ce lien. [variant-1],phishing,french,tn_curated_manual
+102,"Tunisie Telecom: facture impayée, régularisez maintenant sur le portail sécurisé. [variant-2]",phishing,french,tn_curated_manual
+103,Poste Tunisienne: vérification obligatoire de votre identité avant 22h. [variant-3],phishing,french,tn_curated_manual
+104,"STB informe d'une activité suspecte, reconnectez-vous pour confirmer vos données. [variant-4]",phishing,french,tn_curated_manual
+105,"Ooredoo Tunisie: vous avez gagné un bon, renseignez votre carte pour l'activer. [variant-5]",phishing,french,tn_curated_manual
+106,"ANPE: votre dossier est incomplet, envoyez CIN et mot de passe sur la plateforme. [variant-6]",phishing,french,tn_curated_manual
+107,"Douane tunisienne: colis bloqué, paiement requis sous 24h. [variant-7]",phishing,french,tn_curated_manual
+108,"CNAM: votre carte est expirée, mettez à jour les informations personnelles. [variant-8]",phishing,french,tn_curated_manual
+109,"Service e-dinar: compte temporairement gelé, réactivez-le immédiatement. [variant-9]",phishing,french,tn_curated_manual
+110,Alerte gouvernementale: taxe urgente à payer via ce formulaire officiel. [variant-10],phishing,french,tn_curated_manual
+111,Alerte sécurité BIAT: votre compte sera suspendu sans validation immédiate via ce lien. [variant-11],phishing,french,tn_curated_manual
+112,"Tunisie Telecom: facture impayée, régularisez maintenant sur le portail sécurisé. [variant-12]",phishing,french,tn_curated_manual
+113,Poste Tunisienne: vérification obligatoire de votre identité avant 22h. [variant-13],phishing,french,tn_curated_manual
+114,"STB informe d'une activité suspecte, reconnectez-vous pour confirmer vos données. [variant-14]",phishing,french,tn_curated_manual
+115,"Ooredoo Tunisie: vous avez gagné un bon, renseignez votre carte pour l'activer. [variant-15]",phishing,french,tn_curated_manual
+116,"ANPE: votre dossier est incomplet, envoyez CIN et mot de passe sur la plateforme. [variant-16]",phishing,french,tn_curated_manual
+117,"Douane tunisienne: colis bloqué, paiement requis sous 24h. [variant-17]",phishing,french,tn_curated_manual
+118,"CNAM: votre carte est expirée, mettez à jour les informations personnelles. [variant-18]",phishing,french,tn_curated_manual
+119,"Service e-dinar: compte temporairement gelé, réactivez-le immédiatement. [variant-19]",phishing,french,tn_curated_manual
+120,Alerte gouvernementale: taxe urgente à payer via ce formulaire officiel. [variant-20],phishing,french,tn_curated_manual
+121,Alerte sécurité BIAT: votre compte sera suspendu sans validation immédiate via ce lien. [variant-21],phishing,french,tn_curated_manual
+122,"Tunisie Telecom: facture impayée, régularisez maintenant sur le portail sécurisé. [variant-22]",phishing,french,tn_curated_manual
+123,Poste Tunisienne: vérification obligatoire de votre identité avant 22h. [variant-23],phishing,french,tn_curated_manual
+124,"STB informe d'une activité suspecte, reconnectez-vous pour confirmer vos données. [variant-24]",phishing,french,tn_curated_manual
+125,"Ooredoo Tunisie: vous avez gagné un bon, renseignez votre carte pour l'activer. [variant-25]",phishing,french,tn_curated_manual
+126,"ANPE: votre dossier est incomplet, envoyez CIN et mot de passe sur la plateforme. [variant-26]",phishing,french,tn_curated_manual
+127,"Douane tunisienne: colis bloqué, paiement requis sous 24h. [variant-27]",phishing,french,tn_curated_manual
+128,"CNAM: votre carte est expirée, mettez à jour les informations personnelles. [variant-28]",phishing,french,tn_curated_manual
+129,"Service e-dinar: compte temporairement gelé, réactivez-le immédiatement. [variant-29]",phishing,french,tn_curated_manual
+130,Alerte gouvernementale: taxe urgente à payer via ce formulaire officiel. [variant-30],phishing,french,tn_curated_manual
+131,Alerte sécurité BIAT: votre compte sera suspendu sans validation immédiate via ce lien. [variant-31],phishing,french,tn_curated_manual
+132,"Tunisie Telecom: facture impayée, régularisez maintenant sur le portail sécurisé. [variant-32]",phishing,french,tn_curated_manual
+133,Poste Tunisienne: vérification obligatoire de votre identité avant 22h. [variant-33],phishing,french,tn_curated_manual
+134,"STB informe d'une activité suspecte, reconnectez-vous pour confirmer vos données. [variant-34]",phishing,french,tn_curated_manual
+135,"Ooredoo Tunisie: vous avez gagné un bon, renseignez votre carte pour l'activer. [variant-35]",phishing,french,tn_curated_manual
+136,"ANPE: votre dossier est incomplet, envoyez CIN et mot de passe sur la plateforme. [variant-36]",phishing,french,tn_curated_manual
+137,"Douane tunisienne: colis bloqué, paiement requis sous 24h. [variant-37]",phishing,french,tn_curated_manual
+138,"CNAM: votre carte est expirée, mettez à jour les informations personnelles. [variant-38]",phishing,french,tn_curated_manual
+139,"Service e-dinar: compte temporairement gelé, réactivez-le immédiatement. [variant-39]",phishing,french,tn_curated_manual
+140,Alerte gouvernementale: taxe urgente à payer via ce formulaire officiel. [variant-40],phishing,french,tn_curated_manual
+141,Alerte sécurité BIAT: votre compte sera suspendu sans validation immédiate via ce lien. [variant-41],phishing,french,tn_curated_manual
+142,"Tunisie Telecom: facture impayée, régularisez maintenant sur le portail sécurisé. [variant-42]",phishing,french,tn_curated_manual
+143,Poste Tunisienne: vérification obligatoire de votre identité avant 22h. [variant-43],phishing,french,tn_curated_manual
+144,"STB informe d'une activité suspecte, reconnectez-vous pour confirmer vos données. [variant-44]",phishing,french,tn_curated_manual
+145,"Ooredoo Tunisie: vous avez gagné un bon, renseignez votre carte pour l'activer. [variant-45]",phishing,french,tn_curated_manual
+146,"ANPE: votre dossier est incomplet, envoyez CIN et mot de passe sur la plateforme. [variant-46]",phishing,french,tn_curated_manual
+147,"Douane tunisienne: colis bloqué, paiement requis sous 24h. [variant-47]",phishing,french,tn_curated_manual
+148,"CNAM: votre carte est expirée, mettez à jour les informations personnelles. [variant-48]",phishing,french,tn_curated_manual
+149,"Service e-dinar: compte temporairement gelé, réactivez-le immédiatement. [variant-49]",phishing,french,tn_curated_manual
+150,Alerte gouvernementale: taxe urgente à payer via ce formulaire officiel. [variant-50],phishing,french,tn_curated_manual
+151,"Marhbe bik fil espace client BIAT, tnajem tetchouf relevé mta3 chhar hedha. [variant-1]",benign,darija,tn_curated_manual
+152,Tunisie Telecom i3lemkom b promo internet valable lel weekend. [variant-2],benign,darija,tn_curated_manual
+153,Poste Tunisienne t9oul eli wa9t khidma ywalli men 8h lel 16h. [variant-3],benign,darija,tn_curated_manual
+154,STB tab3eth reminder 3adi bach t7addeth coordonnées mte3ek men l'agence. [variant-4],benign,darija,tn_curated_manual
+155,Ooredoo t3allen 3la forfait jdida b appel illimité fil lil. [variant-5],benign,darija,tn_curated_manual
+156,Steg ta3tik options paiement b tadrij 3al facture kbar. [variant-6],benign,darija,tn_curated_manual
+157,Application bancaire ta3tik code OTP ken fil app rasmiya bark. [variant-7],benign,darija,tn_curated_manual
+158,El idara t7ebek ta5ou rendez-vous men plateforme officielle bel ma3loumet. [variant-8],benign,darija,tn_curated_manual
+159,CNAM t9oul ta9dir t7ammel shahadet ta2min men site officiel. [variant-9],benign,darija,tn_curated_manual
+160,Service client BIAT ma yotlobch mot de passe fil téléphone. [variant-10],benign,darija,tn_curated_manual
+161,"Marhbe bik fil espace client BIAT, tnajem tetchouf relevé mta3 chhar hedha. [variant-11]",benign,darija,tn_curated_manual
+162,Tunisie Telecom i3lemkom b promo internet valable lel weekend. [variant-12],benign,darija,tn_curated_manual
+163,Poste Tunisienne t9oul eli wa9t khidma ywalli men 8h lel 16h. [variant-13],benign,darija,tn_curated_manual
+164,STB tab3eth reminder 3adi bach t7addeth coordonnées mte3ek men l'agence. [variant-14],benign,darija,tn_curated_manual
+165,Ooredoo t3allen 3la forfait jdida b appel illimité fil lil. [variant-15],benign,darija,tn_curated_manual
+166,Steg ta3tik options paiement b tadrij 3al facture kbar. [variant-16],benign,darija,tn_curated_manual
+167,Application bancaire ta3tik code OTP ken fil app rasmiya bark. [variant-17],benign,darija,tn_curated_manual
+168,El idara t7ebek ta5ou rendez-vous men plateforme officielle bel ma3loumet. [variant-18],benign,darija,tn_curated_manual
+169,CNAM t9oul ta9dir t7ammel shahadet ta2min men site officiel. [variant-19],benign,darija,tn_curated_manual
+170,Service client BIAT ma yotlobch mot de passe fil téléphone. [variant-20],benign,darija,tn_curated_manual
+171,"Marhbe bik fil espace client BIAT, tnajem tetchouf relevé mta3 chhar hedha. [variant-21]",benign,darija,tn_curated_manual
+172,Tunisie Telecom i3lemkom b promo internet valable lel weekend. [variant-22],benign,darija,tn_curated_manual
+173,Poste Tunisienne t9oul eli wa9t khidma ywalli men 8h lel 16h. [variant-23],benign,darija,tn_curated_manual
+174,STB tab3eth reminder 3adi bach t7addeth coordonnées mte3ek men l'agence. [variant-24],benign,darija,tn_curated_manual
+175,Ooredoo t3allen 3la forfait jdida b appel illimité fil lil. [variant-25],benign,darija,tn_curated_manual
+176,Steg ta3tik options paiement b tadrij 3al facture kbar. [variant-26],benign,darija,tn_curated_manual
+177,Application bancaire ta3tik code OTP ken fil app rasmiya bark. [variant-27],benign,darija,tn_curated_manual
+178,El idara t7ebek ta5ou rendez-vous men plateforme officielle bel ma3loumet. [variant-28],benign,darija,tn_curated_manual
+179,CNAM t9oul ta9dir t7ammel shahadet ta2min men site officiel. [variant-29],benign,darija,tn_curated_manual
+180,Service client BIAT ma yotlobch mot de passe fil téléphone. [variant-30],benign,darija,tn_curated_manual
+181,"Marhbe bik fil espace client BIAT, tnajem tetchouf relevé mta3 chhar hedha. [variant-31]",benign,darija,tn_curated_manual
+182,Tunisie Telecom i3lemkom b promo internet valable lel weekend. [variant-32],benign,darija,tn_curated_manual
+183,Poste Tunisienne t9oul eli wa9t khidma ywalli men 8h lel 16h. [variant-33],benign,darija,tn_curated_manual
+184,STB tab3eth reminder 3adi bach t7addeth coordonnées mte3ek men l'agence. [variant-34],benign,darija,tn_curated_manual
+185,Ooredoo t3allen 3la forfait jdida b appel illimité fil lil. [variant-35],benign,darija,tn_curated_manual
+186,Steg ta3tik options paiement b tadrij 3al facture kbar. [variant-36],benign,darija,tn_curated_manual
+187,Application bancaire ta3tik code OTP ken fil app rasmiya bark. [variant-37],benign,darija,tn_curated_manual
+188,El idara t7ebek ta5ou rendez-vous men plateforme officielle bel ma3loumet. [variant-38],benign,darija,tn_curated_manual
+189,CNAM t9oul ta9dir t7ammel shahadet ta2min men site officiel. [variant-39],benign,darija,tn_curated_manual
+190,Service client BIAT ma yotlobch mot de passe fil téléphone. [variant-40],benign,darija,tn_curated_manual
+191,"Marhbe bik fil espace client BIAT, tnajem tetchouf relevé mta3 chhar hedha. [variant-41]",benign,darija,tn_curated_manual
+192,Tunisie Telecom i3lemkom b promo internet valable lel weekend. [variant-42],benign,darija,tn_curated_manual
+193,Poste Tunisienne t9oul eli wa9t khidma ywalli men 8h lel 16h. [variant-43],benign,darija,tn_curated_manual
+194,STB tab3eth reminder 3adi bach t7addeth coordonnées mte3ek men l'agence. [variant-44],benign,darija,tn_curated_manual
+195,Ooredoo t3allen 3la forfait jdida b appel illimité fil lil. [variant-45],benign,darija,tn_curated_manual
+196,Steg ta3tik options paiement b tadrij 3al facture kbar. [variant-46],benign,darija,tn_curated_manual
+197,Application bancaire ta3tik code OTP ken fil app rasmiya bark. [variant-47],benign,darija,tn_curated_manual
+198,El idara t7ebek ta5ou rendez-vous men plateforme officielle bel ma3loumet. [variant-48],benign,darija,tn_curated_manual
+199,CNAM t9oul ta9dir t7ammel shahadet ta2min men site officiel. [variant-49],benign,darija,tn_curated_manual
+200,Service client BIAT ma yotlobch mot de passe fil téléphone. [variant-50],benign,darija,tn_curated_manual
+201,إشعار من البنك: يمكنكم متابعة كشف الحساب الشهري عبر التطبيق الرسمي. [variant-1],benign,arabic,tn_curated_manual
+202,بلاغ من Tunisie Telecom حول تحسينات صيانة الشبكة هذا المساء. [variant-2],benign,arabic,tn_curated_manual
+203,البريد التونسي يعلن عن أوقات العمل الجديدة خلال شهر رمضان. [variant-3],benign,arabic,tn_curated_manual
+204,رسالة توعوية: لا تشارك رمز OTP مع أي شخص مهما كانت الجهة. [variant-4],benign,arabic,tn_curated_manual
+205,إعلام من STB حول خدمة الحجز المسبق للمواعيد داخل الوكالات. [variant-5],benign,arabic,tn_curated_manual
+206,CNAM تذكر المشتركين بموعد تجديد الملفات السنوية. [variant-6],benign,arabic,tn_curated_manual
+207,بلاغ حكومي: منصة الخدمات الرقمية متاحة عبر الرابط الرسمي فقط. [variant-7],benign,arabic,tn_curated_manual
+208,شركة الكهرباء تدعو إلى اعتماد الدفع الإلكتروني عبر التطبيق المعتمد. [variant-8],benign,arabic,tn_curated_manual
+209,رسالة تثقيفية من tunCERT حول طرق كشف روابط التصيد. [variant-9],benign,arabic,tn_curated_manual
+210,إشعار من Ooredoo حول عرض إنترنت جديد دون طلب أي بيانات حساسة. [variant-10],benign,arabic,tn_curated_manual
+211,إشعار من البنك: يمكنكم متابعة كشف الحساب الشهري عبر التطبيق الرسمي. [variant-11],benign,arabic,tn_curated_manual
+212,بلاغ من Tunisie Telecom حول تحسينات صيانة الشبكة هذا المساء. [variant-12],benign,arabic,tn_curated_manual
+213,البريد التونسي يعلن عن أوقات العمل الجديدة خلال شهر رمضان. [variant-13],benign,arabic,tn_curated_manual
+214,رسالة توعوية: لا تشارك رمز OTP مع أي شخص مهما كانت الجهة. [variant-14],benign,arabic,tn_curated_manual
+215,إعلام من STB حول خدمة الحجز المسبق للمواعيد داخل الوكالات. [variant-15],benign,arabic,tn_curated_manual
+216,CNAM تذكر المشتركين بموعد تجديد الملفات السنوية. [variant-16],benign,arabic,tn_curated_manual
+217,بلاغ حكومي: منصة الخدمات الرقمية متاحة عبر الرابط الرسمي فقط. [variant-17],benign,arabic,tn_curated_manual
+218,شركة الكهرباء تدعو إلى اعتماد الدفع الإلكتروني عبر التطبيق المعتمد. [variant-18],benign,arabic,tn_curated_manual
+219,رسالة تثقيفية من tunCERT حول طرق كشف روابط التصيد. [variant-19],benign,arabic,tn_curated_manual
+220,إشعار من Ooredoo حول عرض إنترنت جديد دون طلب أي بيانات حساسة. [variant-20],benign,arabic,tn_curated_manual
+221,إشعار من البنك: يمكنكم متابعة كشف الحساب الشهري عبر التطبيق الرسمي. [variant-21],benign,arabic,tn_curated_manual
+222,بلاغ من Tunisie Telecom حول تحسينات صيانة الشبكة هذا المساء. [variant-22],benign,arabic,tn_curated_manual
+223,البريد التونسي يعلن عن أوقات العمل الجديدة خلال شهر رمضان. [variant-23],benign,arabic,tn_curated_manual
+224,رسالة توعوية: لا تشارك رمز OTP مع أي شخص مهما كانت الجهة. [variant-24],benign,arabic,tn_curated_manual
+225,إعلام من STB حول خدمة الحجز المسبق للمواعيد داخل الوكالات. [variant-25],benign,arabic,tn_curated_manual
+226,CNAM تذكر المشتركين بموعد تجديد الملفات السنوية. [variant-26],benign,arabic,tn_curated_manual
+227,بلاغ حكومي: منصة الخدمات الرقمية متاحة عبر الرابط الرسمي فقط. [variant-27],benign,arabic,tn_curated_manual
+228,شركة الكهرباء تدعو إلى اعتماد الدفع الإلكتروني عبر التطبيق المعتمد. [variant-28],benign,arabic,tn_curated_manual
+229,رسالة تثقيفية من tunCERT حول طرق كشف روابط التصيد. [variant-29],benign,arabic,tn_curated_manual
+230,إشعار من Ooredoo حول عرض إنترنت جديد دون طلب أي بيانات حساسة. [variant-30],benign,arabic,tn_curated_manual
+231,إشعار من البنك: يمكنكم متابعة كشف الحساب الشهري عبر التطبيق الرسمي. [variant-31],benign,arabic,tn_curated_manual
+232,بلاغ من Tunisie Telecom حول تحسينات صيانة الشبكة هذا المساء. [variant-32],benign,arabic,tn_curated_manual
+233,البريد التونسي يعلن عن أوقات العمل الجديدة خلال شهر رمضان. [variant-33],benign,arabic,tn_curated_manual
+234,رسالة توعوية: لا تشارك رمز OTP مع أي شخص مهما كانت الجهة. [variant-34],benign,arabic,tn_curated_manual
+235,إعلام من STB حول خدمة الحجز المسبق للمواعيد داخل الوكالات. [variant-35],benign,arabic,tn_curated_manual
+236,CNAM تذكر المشتركين بموعد تجديد الملفات السنوية. [variant-36],benign,arabic,tn_curated_manual
+237,بلاغ حكومي: منصة الخدمات الرقمية متاحة عبر الرابط الرسمي فقط. [variant-37],benign,arabic,tn_curated_manual
+238,شركة الكهرباء تدعو إلى اعتماد الدفع الإلكتروني عبر التطبيق المعتمد. [variant-38],benign,arabic,tn_curated_manual
+239,رسالة تثقيفية من tunCERT حول طرق كشف روابط التصيد. [variant-39],benign,arabic,tn_curated_manual
+240,إشعار من Ooredoo حول عرض إنترنت جديد دون طلب أي بيانات حساسة. [variant-40],benign,arabic,tn_curated_manual
+241,إشعار من البنك: يمكنكم متابعة كشف الحساب الشهري عبر التطبيق الرسمي. [variant-41],benign,arabic,tn_curated_manual
+242,بلاغ من Tunisie Telecom حول تحسينات صيانة الشبكة هذا المساء. [variant-42],benign,arabic,tn_curated_manual
+243,البريد التونسي يعلن عن أوقات العمل الجديدة خلال شهر رمضان. [variant-43],benign,arabic,tn_curated_manual
+244,رسالة توعوية: لا تشارك رمز OTP مع أي شخص مهما كانت الجهة. [variant-44],benign,arabic,tn_curated_manual
+245,إعلام من STB حول خدمة الحجز المسبق للمواعيد داخل الوكالات. [variant-45],benign,arabic,tn_curated_manual
+246,CNAM تذكر المشتركين بموعد تجديد الملفات السنوية. [variant-46],benign,arabic,tn_curated_manual
+247,بلاغ حكومي: منصة الخدمات الرقمية متاحة عبر الرابط الرسمي فقط. [variant-47],benign,arabic,tn_curated_manual
+248,شركة الكهرباء تدعو إلى اعتماد الدفع الإلكتروني عبر التطبيق المعتمد. [variant-48],benign,arabic,tn_curated_manual
+249,رسالة تثقيفية من tunCERT حول طرق كشف روابط التصيد. [variant-49],benign,arabic,tn_curated_manual
+250,إشعار من Ooredoo حول عرض إنترنت جديد دون طلب أي بيانات حساسة. [variant-50],benign,arabic,tn_curated_manual
+251,Message BIAT: votre relevé mensuel est disponible dans l'application officielle. [variant-1],benign,french,tn_curated_manual
+252,Information STB: maintenance planifiée des services samedi matin. [variant-2],benign,french,tn_curated_manual
+253,Tunisie Telecom annonce une offre fibre pour les nouveaux clients. [variant-3],benign,french,tn_curated_manual
+254,Poste Tunisienne rappelle de vérifier l'URL officielle avant toute connexion. [variant-4],benign,french,tn_curated_manual
+255,CNAM informe sur la procédure normale de mise à jour du dossier médical. [variant-5],benign,french,tn_curated_manual
+256,Ooredoo Tunisie communique une promotion valable jusqu'à la fin du mois. [variant-6],benign,french,tn_curated_manual
+257,Rappel sécurité: aucune banque ne demande votre mot de passe par SMS. [variant-7],benign,french,tn_curated_manual
+258,Avis e-gov: utilisez uniquement les portails se terminant par .tn. [variant-8],benign,french,tn_curated_manual
+259,Communication ANCS: guide de cybersécurité publié pour les citoyens. [variant-9],benign,french,tn_curated_manual
+260,Notification service client: assistance disponible de 8h à 18h. [variant-10],benign,french,tn_curated_manual
+261,Message BIAT: votre relevé mensuel est disponible dans l'application officielle. [variant-11],benign,french,tn_curated_manual
+262,Information STB: maintenance planifiée des services samedi matin. [variant-12],benign,french,tn_curated_manual
+263,Tunisie Telecom annonce une offre fibre pour les nouveaux clients. [variant-13],benign,french,tn_curated_manual
+264,Poste Tunisienne rappelle de vérifier l'URL officielle avant toute connexion. [variant-14],benign,french,tn_curated_manual
+265,CNAM informe sur la procédure normale de mise à jour du dossier médical. [variant-15],benign,french,tn_curated_manual
+266,Ooredoo Tunisie communique une promotion valable jusqu'à la fin du mois. [variant-16],benign,french,tn_curated_manual
+267,Rappel sécurité: aucune banque ne demande votre mot de passe par SMS. [variant-17],benign,french,tn_curated_manual
+268,Avis e-gov: utilisez uniquement les portails se terminant par .tn. [variant-18],benign,french,tn_curated_manual
+269,Communication ANCS: guide de cybersécurité publié pour les citoyens. [variant-19],benign,french,tn_curated_manual
+270,Notification service client: assistance disponible de 8h à 18h. [variant-20],benign,french,tn_curated_manual
+271,Message BIAT: votre relevé mensuel est disponible dans l'application officielle. [variant-21],benign,french,tn_curated_manual
+272,Information STB: maintenance planifiée des services samedi matin. [variant-22],benign,french,tn_curated_manual
+273,Tunisie Telecom annonce une offre fibre pour les nouveaux clients. [variant-23],benign,french,tn_curated_manual
+274,Poste Tunisienne rappelle de vérifier l'URL officielle avant toute connexion. [variant-24],benign,french,tn_curated_manual
+275,CNAM informe sur la procédure normale de mise à jour du dossier médical. [variant-25],benign,french,tn_curated_manual
+276,Ooredoo Tunisie communique une promotion valable jusqu'à la fin du mois. [variant-26],benign,french,tn_curated_manual
+277,Rappel sécurité: aucune banque ne demande votre mot de passe par SMS. [variant-27],benign,french,tn_curated_manual
+278,Avis e-gov: utilisez uniquement les portails se terminant par .tn. [variant-28],benign,french,tn_curated_manual
+279,Communication ANCS: guide de cybersécurité publié pour les citoyens. [variant-29],benign,french,tn_curated_manual
+280,Notification service client: assistance disponible de 8h à 18h. [variant-30],benign,french,tn_curated_manual
+281,Message BIAT: votre relevé mensuel est disponible dans l'application officielle. [variant-31],benign,french,tn_curated_manual
+282,Information STB: maintenance planifiée des services samedi matin. [variant-32],benign,french,tn_curated_manual
+283,Tunisie Telecom annonce une offre fibre pour les nouveaux clients. [variant-33],benign,french,tn_curated_manual
+284,Poste Tunisienne rappelle de vérifier l'URL officielle avant toute connexion. [variant-34],benign,french,tn_curated_manual
+285,CNAM informe sur la procédure normale de mise à jour du dossier médical. [variant-35],benign,french,tn_curated_manual
+286,Ooredoo Tunisie communique une promotion valable jusqu'à la fin du mois. [variant-36],benign,french,tn_curated_manual
+287,Rappel sécurité: aucune banque ne demande votre mot de passe par SMS. [variant-37],benign,french,tn_curated_manual
+288,Avis e-gov: utilisez uniquement les portails se terminant par .tn. [variant-38],benign,french,tn_curated_manual
+289,Communication ANCS: guide de cybersécurité publié pour les citoyens. [variant-39],benign,french,tn_curated_manual
+290,Notification service client: assistance disponible de 8h à 18h. [variant-40],benign,french,tn_curated_manual
+291,Message BIAT: votre relevé mensuel est disponible dans l'application officielle. [variant-41],benign,french,tn_curated_manual
+292,Information STB: maintenance planifiée des services samedi matin. [variant-42],benign,french,tn_curated_manual
+293,Tunisie Telecom annonce une offre fibre pour les nouveaux clients. [variant-43],benign,french,tn_curated_manual
+294,Poste Tunisienne rappelle de vérifier l'URL officielle avant toute connexion. [variant-44],benign,french,tn_curated_manual
+295,CNAM informe sur la procédure normale de mise à jour du dossier médical. [variant-45],benign,french,tn_curated_manual
+296,Ooredoo Tunisie communique une promotion valable jusqu'à la fin du mois. [variant-46],benign,french,tn_curated_manual
+297,Rappel sécurité: aucune banque ne demande votre mot de passe par SMS. [variant-47],benign,french,tn_curated_manual
+298,Avis e-gov: utilisez uniquement les portails se terminant par .tn. [variant-48],benign,french,tn_curated_manual
+299,Communication ANCS: guide de cybersécurité publié pour les citoyens. [variant-49],benign,french,tn_curated_manual
+300,Notification service client: assistance disponible de 8h à 18h. [variant-50],benign,french,tn_curated_manual
