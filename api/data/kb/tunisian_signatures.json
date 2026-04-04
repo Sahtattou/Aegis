@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": "R-001",
+    "name": "Password verification lure",
+    "pattern": "verify password",
+    "matcher": "substring",
+    "decision": "malicious",
+    "confidence": 0.95,
+    "enabled": true
+  },
+  {
+    "id": "R-002",
+    "name": "Urgent transfer request",
+    "pattern": "urgent transfer",
+    "matcher": "substring",
+    "decision": "malicious",
+    "confidence": 0.93,
+    "enabled": true
+  },
+  {
+    "id": "R-003",
+    "name": "Credential phishing regex",
+    "pattern": "(reset|verify).*(account|password)",
+    "matcher": "regex",
+    "decision": "suspicious",
+    "confidence": 0.82,
+    "enabled": true
+  }
+]
