@@ -4,6 +4,7 @@ pydantic
 pydantic-settings
 neo4j
 python-dotenv
+langchain
 httpx
 sentence-transformers
 torch

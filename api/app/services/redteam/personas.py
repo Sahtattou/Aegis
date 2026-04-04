@@ -1,5 +1,5 @@
 PERSONAS = [
-    "phishing-operator",
-    "credential-stuffer",
-    "social-engineer",
+    "Tunisian Phishing Operator",
+    "Tunisian Credential Stuffer",
+    "Tunisian Social Engineer",
 ]
