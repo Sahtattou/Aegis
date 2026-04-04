@@ -1,2 +1,61 @@
-def run_pipeline(payload: dict) -> dict:
-    return {"result": "pending", "input": payload}
+from app.models.detection import EvaluateRequest, EvaluateResponse
+from app.services.blueteam.classifier import classify
+from app.services.blueteam.embeddings import embed
+from app.services.blueteam.graphrag import retrieve_context
+from app.services.blueteam.preprocessor import preprocess
+from app.services.blueteam.rules_engine import apply_rules
+from app.services.blueteam.xai import explain_french
+
+
+
+def run_pipeline(req: EvaluateRequest) -> EvaluateResponse:
+    trace: list[str] = []
+    normalized = preprocess(req.content)
+    trace.append("preprocess")
+
+    rules_result = apply_rules(normalized)
+    trace.append("rules_engine")
+
+    if rules_result.matched:
+            evidence = [f"Rule match: {r}" for r in rules_result.matched_rules]
+            explanation = explain_french(
+                decision=rules_result.decision or "malicious",
+                confidence=rules_result.confidence or 0.9,
+                evidence=evidence,
+            )
+            trace.append("xai")
+            return EvaluateResponse(
+                attack_id=req.attack_id,
+                decision=rules_result.decision or "malicious",
+                confidence=rules_result.confidence or 0.9,
+                matched_rules=rules_result.matched_rules,
+                model_label=None,
+                explanation_fr=explanation,
+                evidence=evidence,
+                pipeline_trace=trace,
+            )
+    features = embed(normalized)
+    trace.append("embeddings")
+
+    clf = classify(features)
+    trace.append("classifier")
+
+    gr = retrieve_context(normalized)
+    trace.append("graphrag")
+
+    explanation = explain_french(
+        decision=clf.label,
+        confidence=clf.confidence,
+        evidence=gr.evidence,
+    )
+    trace.append("Xai")
+    return EvaluateResponse(
+        attack_id=req.attack_id,
+        decision=clf.label if clf.label in {"malicious", "suspicious", "benign"} else "suspicious",
+        confidence=clf.confidence,
+        matched_rules=[],
+        model_label=clf.label,
+        explanation_fr=explanation,
+        evidence=gr.evidence,
+        pipeline_trace=trace,
+    )

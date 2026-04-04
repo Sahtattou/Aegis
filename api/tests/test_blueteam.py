@@ -1,2 +1,24 @@
-def test_blueteam_placeholder() -> None:
-    assert True
+from fastapi.testclient import TestClient
+from app.service_apps.blueteam import app
+client = TestClient(app)
+
+
+
+
+def test_evaluate_contract_valid():
+    payload = {
+        "attack_id": "A-1",
+        "content": "Please verify password urgently",
+        "source": "email",
+        "metadata": {"lang": "fr"},
+    }
+    response = client.post("/evaluate", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["attack_id"] == "A-1"
+    assert "decision" in data
+    assert "confidence" in data
+    assert "pipeline_trace" in data
+def test_evaluate_contract_missing_field():
+    response = client.post("/evaluate", json={"content": "missing id"})
+    assert response.status_code == 422
