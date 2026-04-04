@@ -1,4 +1,80 @@
 services:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: haris-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    env_file:
+      - .env
+    volumes:
+      - ./neo4j/init:/docker-entrypoint-initdb.d
+      - ./neo4j/plugins:/plugins
+
+  gateway:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.gateway
+    container_name: haris-gateway
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+      - redteam
+      - blueteam
+      - blindspot
+      - audit
+
+  redteam:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.redteam
+    container_name: haris-redteam
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+
+  blueteam:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.blueteam
+    container_name: haris-blueteam
+    ports:
+      - "8002:8002"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+
+  blindspot:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.blindspot
+    container_name: haris-blindspot
+    ports:
+      - "8003:8003"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+
+  audit:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.audit
+    container_name: haris-audit
+    ports:
+      - "8004:8004"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+
   frontend:
     build:
       context: ./frontend
@@ -6,8 +82,5 @@ services:
     container_name: aegis-frontend
     ports:
       - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - gateway
