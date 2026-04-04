@@ -1,0 +1,8 @@
+// Constraints & indexes
+CREATE CONSTRAINT attack_id IF NOT EXISTS
+FOR (a:Attack)
+REQUIRE a.id IS UNIQUE;
+
+CREATE CONSTRAINT rule_id IF NOT EXISTS
+FOR (r:Rule)
+REQUIRE r.id IS UNIQUE;

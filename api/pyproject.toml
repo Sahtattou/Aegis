@@ -1,0 +1,5 @@
+[project]
+name = "haris-api"
+version = "0.1.0"
+description = "HARIS FastAPI backend scaffold"
+requires-python = ">=3.11"
