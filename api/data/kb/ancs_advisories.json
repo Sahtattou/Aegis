@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "ANCS-2026-001",
+    "title": "Campagne de phishing ciblant les institutions financières tunisiennes",
+    "description": "L'ANCS alerte sur des messages demandant la vérification urgente du mot de passe et de transferts bancaires.",
+    "published_date": "2026-03-05T09:00:00Z",
+    "severity": "high",
+    "source": "ANCS",
+    "target_organizations": ["BIAT", "STB"],
+    "mitre_techniques": ["T1566"],
+    "references": [
+      "https://www.ancs.tn/fr/alertes-de-securite"
+    ]
+  },
+  {
+    "id": "TUNCERT-2026-014",
+    "title": "Alerte credential stuffing sur portails opérateurs télécom",
+    "description": "TunCERT observe une montée de tentatives de force brute sur les portails clients télécom.",
+    "published_date": "2026-03-18T11:30:00Z",
+    "severity": "medium",
+    "source": "tunCERT",
+    "target_organizations": ["Tunisie Telecom", "Ooredoo Tunisie"],
+    "mitre_techniques": ["T1110"],
+    "references": [
+      "https://www.financialcert.tn/alerte-2/"
+    ]
+  }
+]

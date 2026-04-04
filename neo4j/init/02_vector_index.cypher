@@ -4,7 +4,7 @@ FOR (a:Attack)
 ON (a.embedding)
 OPTIONS {
   indexConfig: {
-    `vector.dimensions`: 768,
+    `vector.dimensions`: 384,
     `vector.similarity_function`: 'cosine'
   }
 };

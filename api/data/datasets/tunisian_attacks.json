@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "ATTACK-2026-0001",
+    "title": "BIAT urgent transfer lure",
+    "description": "Email claims urgent internal transfer and asks for password verification.",
+    "content_text": "Alerte BIAT: urgent transfer en attente, verify password now.",
+    "label": "phishing",
+    "language": "fr",
+    "source": "red-agent",
+    "target_organizations": ["BIAT"],
+    "techniques": ["T1566"],
+    "severity": "high",
+    "created_at": "2026-04-04T12:00:00Z"
+  },
+  {
+    "id": "ATTACK-2026-0002",
+    "title": "Credential reset spoof in Arabic",
+    "description": "Arabic SMS-style bait requesting immediate credential reset.",
+    "content_text": "تم رصد نشاط مشبوه، قم بإعادة تعيين كلمة المرور الآن عبر الرابط.",
+    "label": "phishing",
+    "language": "ar",
+    "source": "red-agent",
+    "target_organizations": ["Poste Tunisienne"],
+    "techniques": ["T1566", "T1110"],
+    "severity": "medium",
+    "created_at": "2026-04-04T12:10:00Z"
+  },
+  {
+    "id": "ATTACK-2026-0003",
+    "title": "Benign telecom maintenance notice",
+    "description": "Legitimate maintenance communication from telecom operator.",
+    "content_text": "Tunisie Telecom annonce une maintenance planifiée sans demande d'identifiants.",
+    "label": "benign",
+    "language": "fr",
+    "source": "curated-dataset",
+    "target_organizations": ["Tunisie Telecom"],
+    "techniques": [],
+    "severity": "low",
+    "created_at": "2026-04-04T12:20:00Z"
+  }
+]

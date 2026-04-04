@@ -5,12 +5,16 @@ from app.services.blueteam.graphrag import retrieve_context
 from app.services.blueteam.preprocessor import preprocess
 from app.services.blueteam.rules_engine import apply_rules, load_rules
 from app.services.blueteam.xai import explain_french
+
+
 def _coerce_decision(value: str) -> DecisionLabel:
     if value == "malicious":
         return "malicious"
     if value == "benign":
         return "benign"
     return "suspicious"
+
+
 def run_pipeline(req: EvaluateRequest) -> EvaluateResponse:
     trace: list[str] = []
     preprocessed = preprocess(req.content)

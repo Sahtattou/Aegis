@@ -1,9 +1,11 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 
+from app.core.security import configure_app_security, require_internal_api_key
 from app.db.repository import Repository
 from app.services.redteam.attack_generator import generate_attack
 
 app = FastAPI(title="HARIS Red Team Service")
+configure_app_security(app)
 repository = Repository()
 
 
@@ -13,7 +15,7 @@ def health() -> dict[str, str]:
 
 
 @app.post("/run")
-def run_redteam() -> dict:
+def run_redteam(_: None = Depends(require_internal_api_key)) -> dict:
     attack = generate_attack()
     created_attack = repository.create_attack(
         attack_id=attack["id"],
@@ -29,5 +31,5 @@ def run_redteam() -> dict:
 
 
 @app.get("/attacks")
-def list_attacks(limit: int = 20) -> dict:
+def list_attacks(limit: int = 20, _: None = Depends(require_internal_api_key)) -> dict:
     return {"items": repository.list_recent_attacks(limit=limit)}

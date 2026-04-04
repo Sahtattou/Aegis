@@ -20,6 +20,7 @@ build/
 .DS_Store
 .idea/
 .vscode/
+*.swp
 
 # Neo4j data
 neo4j/data/
@@ -28,3 +29,4 @@ neo4j/logs/
 # Model artifacts
 api/data/models/*
 !api/data/models/.gitkeep
+data/models/

@@ -1,4 +1,6 @@
 from fastapi.testclient import TestClient
+
+from app.config import settings
 from app.service_apps.blueteam import app
 
 client = TestClient(app)
@@ -52,3 +54,39 @@ def test_evaluate_ml_path():
     assert data["matched_rules"] == []
     assert "embeddings" in data["pipeline_trace"]
     assert "classifier" in data["pipeline_trace"]
+
+
+def test_evaluate_requires_internal_key_if_configured() -> None:
+    previous = settings.internal_api_key
+    settings.internal_api_key = "secret-key"
+    payload = {
+        "attack_id": "A-4",
+        "content": "normal message",
+        "source": "email",
+        "metadata": {},
+    }
+    try:
+        response = client.post("/evaluate", json=payload)
+        assert response.status_code == 401
+    finally:
+        settings.internal_api_key = previous
+
+
+def test_evaluate_with_internal_key_if_configured() -> None:
+    previous = settings.internal_api_key
+    settings.internal_api_key = "secret-key"
+    payload = {
+        "attack_id": "A-5",
+        "content": "Normal internal notification about policy update",
+        "source": "email",
+        "metadata": {},
+    }
+    try:
+        response = client.post(
+            "/evaluate",
+            json=payload,
+            headers={"X-API-Key": "secret-key"},
+        )
+        assert response.status_code == 200
+    finally:
+        settings.internal_api_key = previous
