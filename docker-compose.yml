@@ -1,5 +1,19 @@
 services:
   api:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: haris-neo4j
+    ports:
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
+    env_file:
+      - .env
+    volumes:
+      - ./neo4j/init:/docker-entrypoint-initdb.d
+      - ./neo4j/plugins:/plugins
+    restart: unless-stopped
+
+  gateway:
     build:
       context: ./api
       dockerfile: Dockerfile
@@ -9,6 +23,60 @@ services:
     networks:
       - app_net
       - redteam_net
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+      - redteam
+      - blueteam
+      - blindspot
+      - audit
+    restart: unless-stopped
+
+  redteam:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.redteam
+    container_name: haris-redteam
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+    restart: unless-stopped
+
+  blueteam:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.blueteam
+    container_name: haris-blueteam
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+    restart: unless-stopped
+
+  blindspot:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.blindspot
+    container_name: haris-blindspot
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+    restart: unless-stopped
+
+  audit:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.audit
+    container_name: haris-audit
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+    restart: unless-stopped
 
   frontend:
     build:
@@ -46,3 +114,7 @@ networks:
   redteam_net:
     driver: bridge
     internal: true
+      - "127.0.0.1:5173:5173"
+    depends_on:
+      - gateway
+    restart: unless-stopped

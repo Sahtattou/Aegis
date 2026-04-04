@@ -8,3 +8,6 @@ langchain
 httpx
 sentence-transformers
 torch
+scikit-learn
+joblib
+numpy

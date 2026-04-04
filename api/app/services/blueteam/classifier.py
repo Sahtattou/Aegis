@@ -1,12 +1,15 @@
-from pydantic import BaseModel
+import importlib
 
+from pydantic import BaseModel, Field
 
 
 class ClassifierResult(BaseModel):
     label: str
-    confidence: float
+    confidence: float = Field(ge=0.0, le=1.0)
 
 
 def classify(features: list[float]) -> ClassifierResult:
-    _ = features
-    return ClassifierResult(label="suspicious", confidence=0.72)
+    module = importlib.import_module("app.services.blueteam.model_loader")
+    predict_from_features = getattr(module, "predict_from_features")
+    label, confidence = predict_from_features(features)
+    return ClassifierResult(label=label, confidence=confidence)

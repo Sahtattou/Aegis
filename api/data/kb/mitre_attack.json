@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "T1566",
+    "name": "Phishing",
+    "tactic": "Initial Access",
+    "description": "Adversaries send fraudulent communications to trick users into revealing credentials or executing payloads.",
+    "references": [
+      "https://attack.mitre.org/techniques/T1566/"
+    ],
+    "source": "MITRE ATT&CK"
+  },
+  {
+    "id": "T1110",
+    "name": "Brute Force",
+    "tactic": "Credential Access",
+    "description": "Adversaries attempt many passwords or keys to obtain valid credentials.",
+    "references": [
+      "https://attack.mitre.org/techniques/T1110/"
+    ],
+    "source": "MITRE ATT&CK"
+  }
+]

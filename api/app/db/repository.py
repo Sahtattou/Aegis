@@ -10,7 +10,11 @@ from app.db.queries.attacks import (
     get_attack_query,
     list_recent_attacks_query,
 )
-from app.db.queries.audit import create_audit_event_query, get_audit_timeline_query
+from app.db.queries.audit import (
+    create_audit_event_constraint_query,
+    create_audit_event_query,
+    get_audit_timeline_query,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +25,13 @@ class Repository:
 
     def health(self) -> dict[str, str]:
         verify_connection()
+        self.ensure_constraints()
         return {"db": "ready"}
+
+    def ensure_constraints(self) -> None:
+        driver = get_driver()
+        with driver.session() as session:
+            session.run(create_audit_event_constraint_query())
 
     def create_attack(self, attack_id: str, content: str, source: str) -> dict:
         if not self._driver:
@@ -85,6 +95,8 @@ class Repository:
     def create_audit_event(self, event_id: str, event_type: str, details: str) -> dict:
         if not self._driver:
             return {}
+        self.ensure_constraints()
+        driver = get_driver()
         params = {"id": event_id, "event_type": event_type, "details": details}
         with self._driver.session() as session:
             record = session.run(create_audit_event_query(), params).single()

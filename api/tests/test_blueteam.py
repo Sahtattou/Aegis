@@ -1,4 +1,6 @@
 from fastapi.testclient import TestClient
+
+from app.config import settings
 from app.service_apps.blueteam import app
 
 client = TestClient(app)
