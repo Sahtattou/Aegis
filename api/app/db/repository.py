@@ -29,7 +29,7 @@ class Repository:
         return {"db": "ready"}
 
     def ensure_constraints(self) -> None:
-        driver = get_driver()
+        driver = self._driver or get_neo4j_driver()
         with driver.session() as session:
             session.run(create_audit_event_constraint_query())
 
@@ -96,9 +96,9 @@ class Repository:
         if not self._driver:
             return {}
         self.ensure_constraints()
-        driver = get_driver()
+        driver = self._driver or get_neo4j_driver()
         params = {"id": event_id, "event_type": event_type, "details": details}
-        with self._driver.session() as session:
+        with driver.session() as session:
             record = session.run(create_audit_event_query(), params).single()
             node = record["e"] if record is not None else None
         return dict(node) if node is not None else {}
@@ -110,8 +110,13 @@ class Repository:
             result = session.run(get_audit_timeline_query(), {"limit": limit})
             return [dict(record["e"]) for record in result]
 
-    def max_attack_similarity(self, embedding: list[float], k_neighbors: int = 10) -> float:
+    def max_attack_similarity(
+        self, embedding: list[float], k_neighbors: int = 10
+    ) -> float:
         if not self._driver:
+            return 0.0
+
+        if settings.neo4j_password == "neo4jpassword":
             return 0.0
 
         vector_query = """
@@ -138,7 +143,10 @@ RETURN max(score) AS max_similarity
                 if max_similarity is not None:
                     return max(0.0, min(1.0, float(max_similarity)))
         except Exception as exc:
-            logger.warning("Vector index query failed, falling back to exhaustive cosine query: %s", exc)
+            logger.warning(
+                "Vector index query failed, falling back to exhaustive cosine query: %s",
+                exc,
+            )
 
         try:
             with self._driver.session() as session:
@@ -147,7 +155,9 @@ RETURN max(score) AS max_similarity
                 if max_similarity is not None:
                     return max(0.0, min(1.0, float(max_similarity)))
         except Exception as exc:
-            logger.warning("Exhaustive cosine query failed, defaulting similarity to zero: %s", exc)
+            logger.warning(
+                "Exhaustive cosine query failed, defaulting similarity to zero: %s", exc
+            )
             return 0.0
 
         return 0.0

@@ -3,8 +3,8 @@ from app.db.repository import Repository
 from app.services.redteam.agent import RedTeamAgent
 
 
-def get_db() -> None:
-    return None
+def get_db():
+    return get_neo4j_driver()
 
 
 def get_repository() -> Repository:

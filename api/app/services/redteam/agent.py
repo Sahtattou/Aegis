@@ -1,6 +1,10 @@
 from app.config import settings
 from app.db.repository import Repository
-from app.models.redteam import RedTeamAttackCandidate, RedTeamRunRequest, RedTeamRunResponse
+from app.models.redteam import (
+    RedTeamAttackCandidate,
+    RedTeamRunRequest,
+    RedTeamRunResponse,
+)
 from app.services.redteam.personas import PERSONAS
 from app.utils.llm import invoke_structured_attack
 
@@ -18,7 +22,7 @@ class RedTeamAgent:
                 persona=persona,
                 target=payload.target,
                 objective=payload.objective,
-                dimensions=settings.redteam_vector_dimensions,
+                dimensions=settings.embedding_fallback_dim,
             )
             embedding = generated.embedding
             max_similarity = self._repository.max_attack_similarity(embedding)

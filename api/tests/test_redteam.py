@@ -27,7 +27,7 @@ def test_redteam_run_returns_three_personas_and_novelty_fields() -> None:
         assert 0.0 <= attack["novelty_score"] <= 1.0
         assert 0.0 <= attack["max_similarity"] <= 1.0
         assert isinstance(attack["embedding"], list)
-        assert len(attack["embedding"]) == 768
+        assert len(attack["embedding"]) == 384
 
 
 def test_redteam_run_supports_n_attacks_with_persona_rotation() -> None:

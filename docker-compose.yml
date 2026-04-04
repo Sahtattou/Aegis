@@ -1,5 +1,4 @@
 services:
-  api:
   neo4j:
     image: neo4j:5.26-community
     container_name: haris-neo4j
@@ -12,17 +11,15 @@ services:
       - ./neo4j/init:/docker-entrypoint-initdb.d
       - ./neo4j/plugins:/plugins
     restart: unless-stopped
+    networks:
+      - app_net
 
   gateway:
     build:
       context: ./api
-      dockerfile: Dockerfile
-    container_name: aegis-api
+      dockerfile: Dockerfile.gateway
+    container_name: haris-gateway
     ports:
-      - "8000:8000"
-    networks:
-      - app_net
-      - redteam_net
       - "127.0.0.1:8000:8000"
     env_file:
       - .env
@@ -33,6 +30,8 @@ services:
       - blindspot
       - audit
     restart: unless-stopped
+    networks:
+      - app_net
 
   redteam:
     build:
@@ -44,6 +43,8 @@ services:
     depends_on:
       - neo4j
     restart: unless-stopped
+    networks:
+      - app_net
 
   blueteam:
     build:
@@ -55,6 +56,8 @@ services:
     depends_on:
       - neo4j
     restart: unless-stopped
+    networks:
+      - app_net
 
   blindspot:
     build:
@@ -66,6 +69,8 @@ services:
     depends_on:
       - neo4j
     restart: unless-stopped
+    networks:
+      - app_net
 
   audit:
     build:
@@ -77,44 +82,22 @@ services:
     depends_on:
       - neo4j
     restart: unless-stopped
+    networks:
+      - app_net
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: aegis-frontend
+    container_name: haris-frontend
     ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    networks:
-      - app_net
-
-  kali-redteam:
-    image: kalilinux/kali-rolling
-    container_name: aegis-kali-redteam
-    profiles:
-      - redteam
-    command: ["tail", "-f", "/dev/null"]
-    tty: true
-    stdin_open: true
-    restart: "no"
-    environment:
-      - REDTEAM_TARGET_API_URL=http://api:8000/api/redteam/run
-      - REDTEAM_MODE=simulation
-    networks:
-      - redteam_net
-
-networks:
-  app_net:
-    driver: bridge
-  redteam_net:
-    driver: bridge
-    internal: true
       - "127.0.0.1:5173:5173"
     depends_on:
       - gateway
     restart: unless-stopped
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge

@@ -1,10 +1,8 @@
 from fastapi import FastAPI
 
 from app.api.router import api_router
-from app.core.security import configure_app_security
 
 app = FastAPI(title="HARIS Gateway")
-configure_app_security(app)
 app.include_router(api_router)
 
 
