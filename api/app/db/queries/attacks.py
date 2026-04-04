@@ -14,3 +14,20 @@ def get_attack_query() -> Query:
 
 def list_recent_attacks_query() -> Query:
     return Query("MATCH (a:Attack) RETURN a ORDER BY a.created_at DESC LIMIT $limit")
+
+
+def create_structured_attack_query() -> Query:
+    return Query(
+        "CREATE (a:Attack {"
+        "id: $id, "
+        "content: $content, "
+        "source: $source, "
+        "persona: $persona, "
+        "severity: $severity, "
+        "techniques: $techniques, "
+        "target: $target, "
+        "objective: $objective, "
+        "embedding: $embedding, "
+        "created_at: datetime()"
+        "}) RETURN a"
+    )

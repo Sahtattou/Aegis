@@ -1,79 +1,14 @@
 services:
-  neo4j:
-    image: neo4j:5.26-community
-    container_name: haris-neo4j
-    ports:
-      - "7474:7474"
-      - "7687:7687"
-    env_file:
-      - .env
-    volumes:
-      - ./neo4j/init:/docker-entrypoint-initdb.d
-      - ./neo4j/plugins:/plugins
-
-  gateway:
+  api:
     build:
       context: ./api
-      dockerfile: Dockerfile.gateway
-    container_name: haris-gateway
+      dockerfile: Dockerfile
+    container_name: aegis-api
     ports:
       - "8000:8000"
-    env_file:
-      - .env
-    depends_on:
-      - neo4j
-      - redteam
-      - blueteam
-      - blindspot
-      - audit
-
-  redteam:
-    build:
-      context: ./api
-      dockerfile: Dockerfile.redteam
-    container_name: haris-redteam
-    ports:
-      - "8001:8001"
-    env_file:
-      - .env
-    depends_on:
-      - neo4j
-
-  blueteam:
-    build:
-      context: ./api
-      dockerfile: Dockerfile.blueteam
-    container_name: haris-blueteam
-    ports:
-      - "8002:8002"
-    env_file:
-      - .env
-    depends_on:
-      - neo4j
-
-  blindspot:
-    build:
-      context: ./api
-      dockerfile: Dockerfile.blindspot
-    container_name: haris-blindspot
-    ports:
-      - "8003:8003"
-    env_file:
-      - .env
-    depends_on:
-      - neo4j
-
-  audit:
-    build:
-      context: ./api
-      dockerfile: Dockerfile.audit
-    container_name: haris-audit
-    ports:
-      - "8004:8004"
-    env_file:
-      - .env
-    depends_on:
-      - neo4j
+    networks:
+      - app_net
+      - redteam_net
 
   frontend:
     build:
@@ -82,5 +17,32 @@ services:
     container_name: aegis-frontend
     ports:
       - "5173:5173"
-    depends_on:
-      - gateway
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - app_net
+
+  kali-redteam:
+    image: kalilinux/kali-rolling
+    container_name: aegis-kali-redteam
+    profiles:
+      - redteam
+    command: ["tail", "-f", "/dev/null"]
+    tty: true
+    stdin_open: true
+    restart: "no"
+    environment:
+      - REDTEAM_TARGET_API_URL=http://api:8000/api/redteam/run
+      - REDTEAM_MODE=simulation
+    networks:
+      - redteam_net
+
+networks:
+  app_net:
+    driver: bridge
+  redteam_net:
+    driver: bridge
+    internal: true
