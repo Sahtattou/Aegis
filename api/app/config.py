@@ -17,9 +17,9 @@ class Settings(BaseSettings):
     claude_api_key: str = ""
 
     redteam_vector_index_name: str = "attack_embedding_index"
-    redteam_vector_dimensions: int = 768
+    redteam_vector_dimensions: int = 384
     neo4j_init_on_startup: bool = True
-    neo4j_init_dir: str = "/app/app/db/cypher_init"
+    neo4j_init_dir: str = "/app/neo4j/init"
 
     embedding_model_name: str = (
         "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
