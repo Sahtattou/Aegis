@@ -7,7 +7,8 @@ class GraphRagResult(BaseModel):
 
 def retrieve_context(query: str) -> GraphRagResult:
     _ = query
-    return GraphRagResult([
+    return GraphRagResult(
+        evidence=[
             "Similar attack pattern seen in prior incident #A-102",
             "Node relation: Campaign->CredentialHarvesting",
         ]
