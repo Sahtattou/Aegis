@@ -33,14 +33,10 @@ export function Dialog({
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="mt-3 text-sm text-slate-300">{children}</div>
         <div className="mt-4 flex justify-end gap-2">
-          <Button className="border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700" onClick={onCancel}>
+          <Button variant="ghost" onClick={onCancel}>
             {cancelLabel}
           </Button>
-          <Button
-            className="border-cyan-500 bg-cyan-500 text-slate-950 hover:bg-cyan-400"
-            onClick={onConfirm}
-            disabled={confirmDisabled}
-          >
+          <Button variant="primary" onClick={onConfirm} disabled={confirmDisabled}>
             {confirmLabel}
           </Button>
         </div>

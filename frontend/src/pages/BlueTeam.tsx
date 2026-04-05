@@ -28,16 +28,20 @@ export default function BlueTeam() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <Card>
-        <h1 className="text-xl font-semibold text-slate-100">Blue Team</h1>
+        <p className="text-xs uppercase tracking-[0.2em] text-brand-300">Detection & response</p>
+        <h1 className="mt-2 text-2xl font-semibold text-slate-100">Blue Team Analysis</h1>
+        <p className="mt-2 text-sm leading-6 text-slate-300">
+          Submit suspicious payloads, evaluate detection confidence, and inspect explainability signals.
+        </p>
         <textarea
-          className="mt-3 h-32 w-full rounded border border-slate-700 bg-slate-950 p-3 text-sm text-slate-100"
+          className="mt-4 h-36 w-full rounded-xl border border-slate-700 bg-slate-950/80 p-4 text-sm text-slate-100 outline-none ring-0 transition focus:border-brand-400"
           value={content}
           onChange={(event) => setContent(event.target.value)}
         />
-        <div className="mt-3 flex items-center gap-3">
-          <Button onClick={() => void onEvaluate()} disabled={loading}>
+        <div className="mt-4 flex items-center gap-3">
+          <Button variant="primary" onClick={() => void onEvaluate()} disabled={loading}>
             {loading ? "Evaluating..." : "Evaluate"}
           </Button>
           {error ? <p className="text-sm text-red-300">{error}</p> : null}

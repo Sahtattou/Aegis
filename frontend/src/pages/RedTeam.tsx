@@ -24,12 +24,16 @@ export default function RedTeam() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <Card>
-        <h1 className="text-xl font-semibold text-slate-100">Red Team</h1>
-        <div className="mt-3 flex items-center gap-3">
+        <p className="text-xs uppercase tracking-[0.2em] text-brand-300">Adversarial simulation</p>
+        <h1 className="mt-2 text-2xl font-semibold text-white">Red Team Operations</h1>
+        <p className="mt-2 text-sm leading-6 text-slate-300">
+          Launch controlled attack simulations to generate realistic payloads and feed downstream Blue Team detection.
+        </p>
+        <div className="mt-5 flex flex-wrap items-center gap-3">
           <RunRedTeamButton onRun={() => void onRun()} />
-          {loading ? <p className="text-sm text-slate-300">Running...</p> : null}
+          {loading ? <p className="text-sm text-brand-200">Running simulation...</p> : null}
           {error ? <p className="text-sm text-red-300">{error}</p> : null}
         </div>
       </Card>
