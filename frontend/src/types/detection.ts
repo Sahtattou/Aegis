@@ -1,4 +1,30 @@
+export type DetectionBand = "detected" | "uncertain" | "blind_spot";
+export type ThreatClassLabel = "malicious" | "suspicious" | "benign";
+export type GapSeverity = "LOW" | "MEDIUM" | "HIGH";
+
 export type Detection = {
-  attackId: string;
-  label: string;
+  pipeline_version: string;
+  evaluated_at: string;
+  attack_id: string;
+  ml_confidence: number;
+  llm_confidence: number;
+  fused_confidence: number;
+  detected: boolean;
+  band: DetectionBand;
+  threat_class: ThreatClassLabel;
+  rule_matched: boolean;
+  matched_rules: string[];
+  rule_id: string | null;
+  rule_explanation: string | null;
+  model_label: string | null;
+  decision: ThreatClassLabel;
+  explanation_fr: string;
+  evidence: string[];
+  rag_context_used: string[];
+  context_match: string;
+  blind_spot: boolean;
+  gap_severity: GapSeverity;
+  payload_hash: string;
+  audit_event_id: string;
+  pipeline_trace: string[];
 };
