@@ -18,6 +18,14 @@ class LoadedModel:
     model: object
 
 
+@dataclass
+class PredictionResult:
+    label: str
+    confidence: float
+    probability_map: dict[str, float]
+    model_version: str
+
+
 class ProbaModel(Protocol):
     def predict_proba(self, x: np.ndarray) -> np.ndarray: ...
 
@@ -84,14 +92,42 @@ def load_model(force_reload: bool = False) -> LoadedModel:
         return loaded
 
 
-def predict_from_features(features: list[float]) -> tuple[str, float]:
+def _fallback_probability_map() -> dict[str, float]:
+    return {
+        "benign": 0.20,
+        "suspicious": 0.60,
+        "malicious": 0.20,
+    }
+
+
+def _normalize_probability_map(probability_map: dict[str, float]) -> dict[str, float]:
+    total = sum(max(0.0, float(value)) for value in probability_map.values())
+    if total <= 0.0:
+        return _fallback_probability_map()
+    return {
+        label: max(0.0, float(value)) / total
+        for label, value in probability_map.items()
+    }
+
+
+def predict_from_features(features: list[float]) -> PredictionResult:
     try:
         loaded = load_model()
     except FileNotFoundError:
-        return ("suspicious", 0.51)
+        return PredictionResult(
+            label="suspicious",
+            confidence=0.51,
+            probability_map=_fallback_probability_map(),
+            model_version="unavailable",
+        )
 
     if len(features) != loaded.input_dim:
-        return ("suspicious", 0.51)
+        return PredictionResult(
+            label="suspicious",
+            confidence=0.51,
+            probability_map=_fallback_probability_map(),
+            model_version=loaded.version,
+        )
 
     x = np.array([features], dtype=float)
     if hasattr(loaded.model, "predict_proba"):
@@ -102,8 +138,31 @@ def predict_from_features(features: list[float]) -> tuple[str, float]:
             loaded.labels[best_idx] if best_idx < len(loaded.labels) else "suspicious"
         )
         confidence = float(proba[best_idx])
-        return (label, confidence)
+        probability_map = {
+            loaded.labels[idx] if idx < len(loaded.labels) else f"class_{idx}": float(
+                value
+            )
+            for idx, value in enumerate(proba)
+        }
+        return PredictionResult(
+            label=label,
+            confidence=confidence,
+            probability_map=_normalize_probability_map(probability_map),
+            model_version=loaded.version,
+        )
 
     predict_model = cast(PredictModel, loaded.model)
     pred = predict_model.predict(x)[0]
-    return (str(pred), 0.6)
+    label = str(pred)
+    base_map = {candidate: 0.1 for candidate in loaded.labels}
+    if label in base_map:
+        base_map[label] = 0.8
+    else:
+        base_map[label] = 0.8
+    normalized_map = _normalize_probability_map(base_map)
+    return PredictionResult(
+        label=label,
+        confidence=normalized_map.get(label, 0.6),
+        probability_map=normalized_map,
+        model_version=loaded.version,
+    )

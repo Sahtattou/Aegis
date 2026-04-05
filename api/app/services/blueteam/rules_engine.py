@@ -1,4 +1,3 @@
-
 import json
 import re
 from pathlib import Path
@@ -9,14 +8,26 @@ from pydantic import BaseModel, Field
 Decision = Literal["malicious", "suspicious", "benign"]
 MatcherType = Literal["substring", "regex"]
 
+
 class RuleDefinition(BaseModel):
     id: str
     name: str
+    description: str | None = None
     pattern: str
     matcher: MatcherType = "substring"
     decision: Decision = "suspicious"
     confidence: float = Field(default=0.8, ge=0.0, le=1.0)
     enabled: bool = True
+    created_by: str | None = None
+    source: str | None = None
+
+
+class RuleProvenance(BaseModel):
+    rule_id: str
+    rationale: str
+    approved_by: str
+    confidence: float = Field(ge=0.0, le=1.0)
+
 
 class RulesResult(BaseModel):
     matched: bool
@@ -24,12 +35,14 @@ class RulesResult(BaseModel):
     decision: Decision | None = None
     confidence: float | None = None
     evidence: list[str] = Field(default_factory=list)
+    rule_provenance: RuleProvenance | None = None
 
 
 def _default_rules_path() -> Path:
     # api/app/services/blueteam/rules_engine.py -> api/data/kb/tunisian_signatures.json
-    return Path(__file__).resolve().parents[3] / "data" / "kb" / "tunisian_signatures.json"
-
+    return (
+        Path(__file__).resolve().parents[3] / "data" / "kb" / "tunisian_signatures.json"
+    )
 
 
 def load_rules(path: Path | None = None) -> list[RuleDefinition]:
@@ -49,12 +62,10 @@ def load_rules(path: Path | None = None) -> list[RuleDefinition]:
     return [rule for rule in rules if rule.enabled]
 
 
-
 def _rule_matches(text: str, rule: RuleDefinition) -> bool:
     if rule.matcher == "substring":
         return rule.pattern.lower() in text
     return re.search(rule.pattern, text, flags=re.IGNORECASE) is not None
-
 
 
 def apply_rules(text: str, rules: list[RuleDefinition]) -> RulesResult:
@@ -67,10 +78,17 @@ def apply_rules(text: str, rules: list[RuleDefinition]) -> RulesResult:
     if not matched_rules:
         return RulesResult(matched=False)
     best = max(matched_rules, key=lambda rule: rule.confidence)
+    provenance = RuleProvenance(
+        rule_id=best.id,
+        rationale=best.description or best.name,
+        approved_by=best.created_by or best.source or "unknown",
+        confidence=best.confidence,
+    )
     return RulesResult(
         matched=True,
         matched_rules=[rule.id for rule in matched_rules],
         decision=best.decision,
         confidence=best.confidence,
         evidence=evidence,
+        rule_provenance=provenance,
     )

@@ -1,7 +1,15 @@
 from dataclasses import dataclass
 import re
+from typing import Protocol
 
-from .ioc_extractor import IOCExtractionResult
+
+class IOCExtractionResultLike(Protocol):
+    urls: list[str]
+    domains: list[str]
+    suspicious_domains: list[str]
+    phone_numbers: list[str]
+    base64_chunks: list[str]
+    suspicious_extensions: list[str]
 
 
 @dataclass
@@ -47,7 +55,9 @@ def _arabic_dominance(text: str) -> float:
     return arabic_count / max(len(text), 1)
 
 
-def build_handcrafted_features(text: str, iocs: IOCExtractionResult) -> FeatureVector:
+def build_handcrafted_features(
+    text: str, iocs: IOCExtractionResultLike
+) -> FeatureVector:
     token_count = max(len(text.split()), 1)
     url_count = len(iocs.urls)
     domain_typosquat_count = len(iocs.suspicious_domains)

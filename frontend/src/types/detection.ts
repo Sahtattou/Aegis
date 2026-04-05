@@ -7,7 +7,11 @@ export type Detection = {
   evaluated_at: string;
   attack_id: string;
   ml_confidence: number;
+  class_probability_map: Record<string, number>;
   llm_confidence: number;
+  llm_threat_class: ThreatClassLabel;
+  llm_key_indicators: string[];
+  llm_provenance: string;
   fused_confidence: number;
   detected: boolean;
   band: DetectionBand;
@@ -16,9 +20,13 @@ export type Detection = {
   matched_rules: string[];
   rule_id: string | null;
   rule_explanation: string | null;
+  rule_rationale: string | null;
+  rule_approved_by: string | null;
   model_label: string | null;
   decision: ThreatClassLabel;
   explanation_fr: string;
+  xai_top_contributors: Array<Record<string, string | number>>;
+  explanation_machine: Record<string, string | number | string[]>;
   evidence: string[];
   rag_context_used: string[];
   context_match: string;
