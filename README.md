@@ -16,6 +16,8 @@ The repository is a monorepo composed of:
 
 ## System Architecture
 
+![HARIS System Architecture](./system_architecture_diagram.png)
+
 ```text
 User
   -> Frontend (React + Vite, :5173)
