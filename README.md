@@ -16,19 +16,21 @@ The repository is a monorepo composed of:
 
 ## System Architecture
 
-```mermaid
-flowchart LR
-  U[User] --> F[Frontend :5173]
-  F -->|/api| G[Gateway :8000]
-  G --> RT[Red Team :8001]
-  G --> BT[Blue Team :8002]
-  G --> BS[Blind Spot :8003]
-  G --> AU[Audit :8004]
-  RT --> N[(Neo4j :7687, :7474)]
-  BT --> N
-  BS --> N
-  AU --> N
-  G --> N
+```text
+User
+  -> Frontend (React + Vite, :5173)
+     -> /api
+        -> Gateway (FastAPI, :8000)
+           -> Red Team Service (:8001)
+           -> Blue Team Service (:8002)
+           -> Blind Spot Service (:8003)
+           -> Audit Service (:8004)
+
+Red Team  --+
+Blue Team --+-> Neo4j (:7687 bolt, :7474 browser)
+Blind Spot-+
+Audit     -+
+Gateway   -+
 ```
 
 ### Core runtime flow
