@@ -18,15 +18,13 @@ The repository is a monorepo composed of:
 
 ```mermaid
 flowchart LR
-  U((User)) --> F[Frontend\nReact + Vite\n:5173]
-  F -->|/api| G[Gateway\nFastAPI\n:8000]
-
-  G --> RT[Red Team\n:8001]
-  G --> BT[Blue Team\n:8002]
-  G --> BS[Blind Spot\n:8003]
-  G --> AU[Audit\n:8004]
-
-  RT --> N[(Neo4j\n:7687 / :7474)]
+  U[User] --> F[Frontend :5173]
+  F -->|/api| G[Gateway :8000]
+  G --> RT[Red Team :8001]
+  G --> BT[Blue Team :8002]
+  G --> BS[Blind Spot :8003]
+  G --> AU[Audit :8004]
+  RT --> N[(Neo4j :7687, :7474)]
   BT --> N
   BS --> N
   AU --> N
