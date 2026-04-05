@@ -14,8 +14,12 @@ export function AttackTimeline({ attacks }: AttackTimelineProps) {
       ) : (
         <ul className="mt-3 space-y-2">
           {attacks.slice(0, 5).map((attack) => (
-            <li key={attack.id} className="rounded-md border border-slate-200 bg-slate-50 p-2 text-sm text-slate-700">
-              {attack.content}
+            <li
+              key={attack.attack_id}
+              className="rounded-md border border-slate-200 bg-slate-50 p-2 text-sm text-slate-700"
+            >
+              <p className="font-medium text-slate-900">{attack.attack_id}</p>
+              <p>{attack.content}</p>
             </li>
           ))}
         </ul>

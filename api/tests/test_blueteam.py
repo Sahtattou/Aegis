@@ -88,8 +88,9 @@ def test_evaluate_rules_path_sets_rule_fields() -> None:
     assert "urgency_count" in data["hand_crafted_features"]
     assert data["llm_provenance"] in {
         "llm_fallback_heuristic",
+        "openai_error_fallback",
         "rule_prefilter_short_circuit",
-    }
+    } or data["llm_provenance"].startswith("openai:")
     assert data["class_probability_map"] != {}
     assert (
         abs(
@@ -126,7 +127,10 @@ def test_evaluate_ml_path_sets_routing_fields() -> None:
         )
         < 1e-9
     )
-    assert data["llm_provenance"] == "llm_fallback_heuristic"
+    assert data["llm_provenance"] in {
+        "llm_fallback_heuristic",
+        "openai_error_fallback",
+    } or data["llm_provenance"].startswith("openai:")
     assert isinstance(data["class_probability_map"], dict)
     assert isinstance(data["llm_key_indicators"], list)
     assert isinstance(data["xai_top_contributors"], list)

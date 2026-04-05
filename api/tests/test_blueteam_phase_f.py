@@ -112,6 +112,28 @@ def test_llm_failure_fallback_observability(monkeypatch, caplog) -> None:
     assert any("LLM unavailable" in record.message for record in caplog.records)
 
 
+def test_openai_success_path_sets_available(monkeypatch) -> None:
+    class UpLLM:
+        llm_confidence = 0.87
+        threat_class = "malicious"
+        key_indicators = ["credential_harvest"]
+        context_match = "Matched historical phishing context"
+        available = True
+        provenance = "openai:gpt-4o-mini"
+
+    def fake_llm(**_kwargs) -> UpLLM:
+        return UpLLM()
+
+    monkeypatch.setattr(llm_evaluator, "evaluate_with_llm", fake_llm)
+    monkeypatch.setattr(pipeline, "evaluate_with_llm", fake_llm)
+
+    data = _post_eval("Please verify password now", attack_id="A-openai-success")
+    assert data["llm_provenance"].startswith("openai:")
+    assert "llm_fallback" not in data["pipeline_trace"]
+    assert data["llm_confidence"] == 0.87
+    assert data["llm_threat_class"] == "malicious"
+
+
 def test_xai_payload_shape() -> None:
     data = _post_eval("Please verify password now", attack_id="A-xai-shape")
     assert isinstance(data["xai_top_contributors"], list)

@@ -1,3 +1,5 @@
+import { AuditTimeline } from "../components/audit/AuditTimeline";
+
 export default function Audit() {
-  return <div>Audit</div>;
+  return <AuditTimeline />;
 }

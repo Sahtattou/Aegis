@@ -15,6 +15,11 @@ class Settings(BaseSettings):
     neo4j_acquisition_timeout_seconds: float = 1.0
 
     claude_api_key: str = ""
+    openai_api_key: str = ""
+    openai_model: str = "gpt-4o-mini"
+    openai_base_url: str = "https://api.openai.com/v1"
+    openai_timeout_seconds: float = 6.0
+    openai_max_retries: int = 0
 
     redteam_vector_index_name: str = "attack_embedding_index"
     redteam_vector_dimensions: int = 384
