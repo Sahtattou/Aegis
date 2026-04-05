@@ -101,7 +101,9 @@ services:
       dockerfile: Dockerfile
     container_name: haris-frontend
     ports:
-      - "127.0.0.1:5173:5173"
+      - "127.0.0.1:5173:80"
+    environment:
+      - VITE_API_PROXY_TARGET=http://gateway:8000
     depends_on:
       - gateway
     restart: unless-stopped
