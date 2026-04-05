@@ -50,7 +50,7 @@ def get_settings() -> Settings:
     settings = Settings()
     cache_dir = Path(settings.embedding_cache_dir)
     if not cache_dir.is_absolute():
-        cache_dir = Path(__file__).resolve().parents[2] / cache_dir
+        cache_dir = Path(__file__).resolve().parents[1] / cache_dir
     cache_dir.mkdir(parents=True, exist_ok=True)
     settings.embedding_cache_dir = str(cache_dir)
     return settings
