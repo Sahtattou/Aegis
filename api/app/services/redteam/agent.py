@@ -16,6 +16,15 @@ class RedTeamAgent:
         redteam_run_response = getattr(redteam_models, "RedTeamRunResponse")
         llm_module = import_module("app.utils.llm")
         invoke_structured_attack = getattr(llm_module, "invoke_structured_attack")
+        sanitize_untrusted_text = getattr(llm_module, "_sanitize_untrusted_text")
+
+        safe_target = sanitize_untrusted_text(
+            str(payload.target), fallback="generic-target"
+        )
+        safe_objective = sanitize_untrusted_text(
+            str(payload.objective), fallback="assess defensive posture"
+        )
+        embedding_dim = int(getattr(settings, "embedding_fallback_dim", 384))
 
         attacks: list[Any] = []
 
@@ -23,9 +32,9 @@ class RedTeamAgent:
             persona = PERSONAS[index % len(PERSONAS)]
             generated = invoke_structured_attack(
                 persona=persona,
-                target=payload.target,
-                objective=payload.objective,
-                dimensions=settings.embedding_fallback_dim,
+                target=safe_target,
+                objective=safe_objective,
+                dimensions=embedding_dim,
             )
             embedding = generated.embedding
             max_similarity = self._repository.max_attack_similarity(embedding)
@@ -38,8 +47,8 @@ class RedTeamAgent:
                 persona=persona,
                 severity=generated.severity,
                 techniques=generated.techniques,
-                target=payload.target,
-                objective=payload.objective,
+                target=safe_target,
+                objective=safe_objective,
                 embedding=embedding,
             )
 
@@ -58,8 +67,8 @@ class RedTeamAgent:
 
         return redteam_run_response(
             status="completed",
-            target=payload.target,
-            objective=payload.objective,
+            target=safe_target,
+            objective=safe_objective,
             n_attacks=payload.n_attacks,
             attacks=attacks,
         )
